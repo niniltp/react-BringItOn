@@ -1,0 +1,27 @@
+.MediaCard {
+    margin: auto;
+    width: 50%;
+}
+
+.MediaCard .MediaCard-img {
+    object-fit: cover;
+    object-position: 100% 10%;
+    height: 300px;
+}
+
+.MediaCard .MediaCard-content {
+    padding: 1.25rem;
+}
+
+/* Reactstrap selectors */
+.MediaCard .card {
+    border: none !important;
+}
+
+.MediaCard .card-body {
+    padding: 0 !important;
+}
+
+.MediaCard .card-title {
+    font-weight: bold;
+}
