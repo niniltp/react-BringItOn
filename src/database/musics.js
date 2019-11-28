@@ -86,16 +86,5 @@ export default [
         language: "english",
         rating: 3.7,
         tags: ["holidays","christmas"]
-    },
-    {
-        title: "",
-        duration: ,
-        types: [""],
-        artists: [""],
-        date: "",
-        image: "",
-        language: "english",
-        rating: ,
-        tags: [""]
-    },
+    }
 ];
