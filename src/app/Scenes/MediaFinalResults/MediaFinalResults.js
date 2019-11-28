@@ -6,7 +6,6 @@ import MediasContainer from "../../components/Media/MediasContainer";
 import './MediaFinalResults.css';
 
 function MediaFinalResults() {
-
     return (
         <div className="MediaFinalResults">
             <Fullpage>

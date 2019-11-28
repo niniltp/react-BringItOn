@@ -3,10 +3,6 @@ import './MediaIcon.css';
 import {Card, CardImg} from "reactstrap";
 
 class MediaIcon extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     displayMediaIcon = () => {
         return (
             <div className="MediaIcon">
