@@ -278,5 +278,5 @@ export default [
         language: "english",
         rating: 2.6,
         tags: ["comedy","romance","valentine's day"]
-    },
+    }
 ];
