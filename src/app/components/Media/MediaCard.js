@@ -42,7 +42,7 @@ class MediaCard extends Component {
         const durationInTime = this.state.media.duration ? convertMinutesToTime(this.state.media.duration) : 0;
         return (
             <div className="MediaCard">
-                <Card body inverse style={{backgroundColor: '#333'}}>
+                <Card inverse style={{backgroundColor: '#333'}}>
                     {this.state.media.image ?
                         <CardImg top width="100%" className="MediaCard-img" src={this.state.media.image}
                                  alt={"illustration of " + this.state.media.title}/> : ''}
@@ -50,7 +50,7 @@ class MediaCard extends Component {
                         {this.state.media.title ?
                             <CardTitle className="MediaCard-title">{this.state.media.title}</CardTitle> : ''}
                         {this.state.media.description ?
-                            <CardText className="MediaCard-body">{this.state.media.description}</CardText> : ''}
+                            <CardText>{this.state.media.description}</CardText> : ''}
                         {this.state.media.rating ?
                             <small className="text-muted">Rating: {this.state.media.rating}/5<br/></small> : ''}
                         {this.state.media.date ?

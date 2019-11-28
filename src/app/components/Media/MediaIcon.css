@@ -1,0 +1,8 @@
+/* Reactstrap selectors */
+.MediaIcon .card {
+    border: none !important;
+}
+
+.MediaIcon {
+    margin:  0 10% 0 10%;
+}

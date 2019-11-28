@@ -1,6 +1,7 @@
 html {
   background-color: #282c34;
   padding: 5%;
+  scroll-behavior: smooth;
 }
 
 .App {

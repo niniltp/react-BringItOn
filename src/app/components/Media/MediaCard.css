@@ -1,6 +1,5 @@
 .MediaCard {
     margin: auto;
-    width: 50%;
 }
 
 .MediaCard .MediaCard-body {
@@ -24,4 +23,9 @@
 /* Reactstrap selectors */
 .MediaCard .card {
     border: none !important;
+}
+
+/** Fix bug when opening modal **/
+body {
+    padding-right: 0 !important;
 }
