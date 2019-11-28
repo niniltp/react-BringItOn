@@ -132,7 +132,6 @@ export default [
         types: ["comedy"],
         actors: ["Ali Wong"],
         directors: ["Jay Karas"],
-        producers: [""],
         date: "13/05/2018",
         image: "https://m.media-amazon.com/images/M/MV5BMWVkZDNjZTMtMTY0Yi00OGQ0LTliMDEtMWMxYzljYzZlYTY3XkEyXkFqcGdeQXVyMTEzNjA2NzM@._V1_.jpg",
         language: "english",
