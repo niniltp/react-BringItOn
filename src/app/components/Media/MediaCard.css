@@ -3,6 +3,14 @@
     width: 50%;
 }
 
+.MediaCard .MediaCard-body {
+    padding: 0;
+}
+
+.MediaCard .MediaCard-title {
+    font-weight: bold;
+}
+
 .MediaCard .MediaCard-img {
     object-fit: cover;
     object-position: 100% 10%;
@@ -16,12 +24,4 @@
 /* Reactstrap selectors */
 .MediaCard .card {
     border: none !important;
-}
-
-.MediaCard .card-body {
-    padding: 0 !important;
-}
-
-.MediaCard .card-title {
-    font-weight: bold;
 }
