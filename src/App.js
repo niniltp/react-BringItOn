@@ -4,6 +4,7 @@ import MediaCard from "./app/components/Media/MediaCard";
 import {Container} from "reactstrap";
 import MediaFinalResults from "./app/Scenes/MediaFinalResults/MediaFinalResults";
 import Mood from "./survey/Mood";
+import test, { determineResults } from "./app/service/processing"
 
 const mediaTest = {
     title: "Spider-man: Into the Spider-Verse",
@@ -16,6 +17,7 @@ const mediaTest = {
 
 
 function App() {
+    determineResults("happy","60",["movies","series"]);
     return (
         <MediaFinalResults/>
     );
