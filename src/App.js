@@ -17,7 +17,7 @@ const mediaTest = {
 
 
 function App() {
-    determineResults("happy","60",["movies","series"]);
+    console.log(determineResults("angry","60",["movies","series","musics"]));
     return (
         <MediaFinalResults/>
     );

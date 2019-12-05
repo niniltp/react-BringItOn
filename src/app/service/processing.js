@@ -13,6 +13,7 @@ export function determineResults(mood,time,medias) {
     if(medias.includes("musics")) {tabMedias.push(musics);}
     if(medias.includes("media")) {tabMedias.push(media);}
 
+    console.log(movies==tabMedias[0])
     var result = [];
     var [tags,time] = determineTags(mood,time);
     
@@ -21,7 +22,7 @@ export function determineResults(mood,time,medias) {
         
         element1.forEach(element2 => {
 
-            if((element2["tags"].filter(value => time.includes(value))).length!=0)
+            if((element2["tags"].filter(value => time.includes(value))).length!=0 || element1==musics)
             {
                 var cpt = 0;
 
