@@ -1,6 +1,13 @@
 .MediaCard {
     margin: auto;
-    width: 50%;
+}
+
+.MediaCard .MediaCard-body {
+    padding: 0;
+}
+
+.MediaCard .MediaCard-title {
+    font-weight: bold;
 }
 
 .MediaCard .MediaCard-img {
@@ -18,10 +25,7 @@
     border: none !important;
 }
 
-.MediaCard .card-body {
-    padding: 0 !important;
-}
-
-.MediaCard .card-title {
-    font-weight: bold;
+/** Fix bug when opening modal **/
+body {
+    padding-right: 0 !important;
 }

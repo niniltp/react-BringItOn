@@ -1,12 +1,8 @@
-html {
+.MediaFinalResults {
     background-color: #282c34;
 }
 
-.App {
-    background-color: #282c34;
-}
-
-.App-header {
+.MediaFinalResults-header {
     text-align: center;
     background-color: #282c34;
     min-height: 100vh;

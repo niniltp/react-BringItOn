@@ -13,19 +13,11 @@ const mediaTest = {
     duration: "1h 57m"
 };
 
+import MediaFinalResults from "./app/Scenes/MediaFinalResults/MediaFinalResults";
+
 function App() {
     return (
-        <div className="App">
-            {/* <header className="App-header">
-                <h1>Hi !</h1>
-            </header> */}
-            {/* <Container>
-                <MediaCard media={mediaTest}/>
-            </Container> */}
-            <Container>
-                <Mood/>
-            </Container>
-        </div>
+        <MediaFinalResults/>
     );
 }
 
