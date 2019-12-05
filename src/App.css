@@ -1,5 +1,5 @@
-html {
-    background-color: #282c34;
+html, body {
+    background-color: #282c34 !important;
 }
 
 .App {

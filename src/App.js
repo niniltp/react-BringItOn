@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import MediaCard from "./app/components/Media/MediaCard";
 import {Container} from "reactstrap";
-
+import MediaFinalResults from "./app/Scenes/MediaFinalResults/MediaFinalResults";
 import Mood from "./survey/Mood";
 
 const mediaTest = {
@@ -13,7 +13,7 @@ const mediaTest = {
     duration: "1h 57m"
 };
 
-import MediaFinalResults from "./app/Scenes/MediaFinalResults/MediaFinalResults";
+
 
 function App() {
     return (
