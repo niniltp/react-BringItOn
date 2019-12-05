@@ -5,6 +5,7 @@ import angry from '../img/angry.png'
 import happy from '../img/happy.png'
 import sad from '../img/sad.png'
 import fine from '../img/fine.png'
+import soso from '../img/so-so.png'
 
 class Mood extends Component {
     constructor(props) {
@@ -30,9 +31,12 @@ class Mood extends Component {
             this.setState({ mood : "sad"});
         }
         if(this.state.rSelected === 3){
-            this.setState({ mood : "fine"});
+            this.setState({ mood : "so-so"});
         }
         if(this.state.rSelected === 4){
+            this.setState({ mood : "fine"});
+        }
+        if(this.state.rSelected === 5){
             this.setState({ mood : "happy"});
         }
     }
@@ -46,8 +50,9 @@ class Mood extends Component {
                 <div className="Center">
                     <Button className="Button-mood" onClick={() => this.setRSelected(1)} active={this.state.rSelected === 1}><img src={angry} alt="angryMood"/></Button>
                     <Button className="Button-mood" onClick={() => this.setRSelected(2)} active={this.state.rSelected === 2}><img src={sad} alt="sadMood"/></Button>
-                    <Button className="Button-mood" onClick={() => this.setRSelected(3)} active={this.state.rSelected === 3}><img src={fine} alt="fineMood"/></Button>
-                    <Button className="Button-mood" onClick={() => this.setRSelected(4)} active={this.state.rSelected === 4}><img src={happy} alt="happyMood"/></Button>
+                    <Button className="Button-mood" onClick={() => this.setRSelected(3)} active={this.state.rSelected === 3}><img src={soso} alt="fineMood"/></Button>
+                    <Button className="Button-mood" onClick={() => this.setRSelected(4)} active={this.state.rSelected === 4}><img src={fine} alt="fineMood"/></Button>
+                    <Button className="Button-mood" onClick={() => this.setRSelected(5)} active={this.state.rSelected === 5}><img src={happy} alt="happyMood"/></Button>
                 </div>
                 <h4 className="select-Mood Center">You are {this.state.mood}</h4>
 
