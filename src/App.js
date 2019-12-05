@@ -3,6 +3,8 @@ import './App.css';
 import MediaCard from "./app/components/Media/MediaCard";
 import {Container} from "reactstrap";
 
+import Mood from "./survey/Mood";
+
 const mediaTest = {
     title: "Spider-man: Into the Spider-Verse",
     description: "Teen Miles Morales becomes Spider-Man of his reality, crossing his path with five counterparts from other dimensions to stop a threat for all realities.",
@@ -14,11 +16,14 @@ const mediaTest = {
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
+            {/* <header className="App-header">
                 <h1>Hi !</h1>
-            </header>
-            <Container>
+            </header> */}
+            {/* <Container>
                 <MediaCard media={mediaTest}/>
+            </Container> */}
+            <Container>
+                <Mood/>
             </Container>
         </div>
     );
