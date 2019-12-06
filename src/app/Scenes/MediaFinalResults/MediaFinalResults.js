@@ -5,7 +5,7 @@ import ArrowDown from "../../components/Animations/ArrowDown";
 import MediasContainer from "../../components/Media/MediasContainer";
 import './MediaFinalResults.css';
 
-function MediaFinalResults() {
+function MediaFinalResults(props) {
     return (
         <div className="MediaFinalResults">
             <Fullpage>
@@ -29,14 +29,14 @@ function MediaFinalResults() {
                         height: '100vh',
                         padding: '1em',
                     }}>
-                        <Container><MediasContainer title="Movies"/></Container>
+                        <Container><MediasContainer title="Movies" medias={props.medias}/></Container>
                     </FullpageSection>
                     <FullpageSection style={{
                         height: '100vh',
                         padding: '1em',
                     }}>
                         <Container>
-                            <MediasContainer title="TV Shows"/>
+                            <MediasContainer title="TV Shows" medias={props.medias}/>
                         </Container>
                     </FullpageSection>
                     <FullpageSection style={{
@@ -44,7 +44,7 @@ function MediaFinalResults() {
                         padding: '1em',
                     }}>
                         <Container>
-                            <MediasContainer title="Musics"/>
+                            <MediasContainer title="Musics" medias={props.medias}g/>
                         </Container>
                     </FullpageSection>
                 </FullPageSections>
