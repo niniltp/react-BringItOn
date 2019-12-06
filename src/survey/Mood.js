@@ -12,9 +12,11 @@ class Mood extends Component {
         super(props);
 
         this.state = {
-           rSelected: 0,
-           mood: "..."
+            medias: this.props.location.state,
+            rSelected: 0,
+            mood: "..."
         };
+
     }
 
     setRSelected = (i) => {    
@@ -42,6 +44,7 @@ class Mood extends Component {
     }
 
     render(){
+        console.log(this.state.medias);
         return(
             <div className="Mood-survey">
                 <header className="Survey-header">
