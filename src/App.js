@@ -4,6 +4,7 @@ import MediaCard from "./app/components/Media/MediaCard";
 import {Container} from "reactstrap";
 import MediaFinalResults from "./app/Scenes/MediaFinalResults/MediaFinalResults";
 import Mood from "./survey/Mood";
+import Time from "./survey/Time";
 
 const mediaTest = {
     title: "Spider-man: Into the Spider-Verse",
