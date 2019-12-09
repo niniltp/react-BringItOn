@@ -1,0 +1,72 @@
+.text-box {
+    margin-left: 44vw;
+    margin-top: 42vh;
+    width: 100px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+}
+
+.btn-white {
+    border-radius: 100px !important;
+    background: linear-gradient(to right, rgb(214, 59, 194), rgb(236, 132, 21));
+    color: #ffffff !important;
+}
+
+.btn-white::after {
+    background-color: #fff !important;
+    border-color: #fff !important;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.btn-secondary{
+    border-color: #282c34 !important;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* other color for mood */
+.btn-color-continue{
+    background-color: rgb(253, 253, 253) !important;
+    border-radius: 100px !important;
+    color: #282c34 !important;
+    padding: 6px 26px !important;
+}

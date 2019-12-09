@@ -19,6 +19,8 @@ html {
   margin: 100px;
 }
 
+/* MOOD */
+
 .Button-mood {
   width: 65px;
   height: 65px;
@@ -30,9 +32,9 @@ html {
 }
 
 .Center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .select-Mood {
@@ -41,6 +43,7 @@ html {
 }
 
 .Continue-mood {
+  margin-top: 30px;
   float: right !important;
 }
 
@@ -51,3 +54,54 @@ html {
   margin-right: 5px;
 }
 
+/* TIME */
+
+/* timeline element */
+.Timeline{
+    text-align: center;
+    width: 80%;
+    height: 5px;
+    background: linear-gradient(to right, rgb(214, 59, 194), rgb(236, 132, 21));
+    border-radius: 20px !important;
+}
+
+/* test time line */
+.a{
+  padding-inline-start: 0px !important;
+}
+
+/* points on timeline */
+.a li {
+    list-style-type: none;
+    float: left;
+    width: 20%;
+    position: relative;
+    text-align: center;
+    top: -18px;
+}
+
+/* button element on the timeline */
+.Button-time {
+    width: 30px !important;
+    height: 30px !important;
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    padding: 6px !important;
+    color: #282c34 !important;
+    border-radius: 50px !important;
+}
+
+/* for the part with the time */
+.text-time{
+    margin-top: 30px !important;
+}
+
+/* color for the text */
+.colorfont{
+    color: #ffffff !important;
+}
+
+
+.select-Time{
+  margin-top: 80px !important;
+}

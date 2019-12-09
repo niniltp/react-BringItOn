@@ -6,6 +6,7 @@ import MediaFinalResults from "./app/Scenes/MediaFinalResults/MediaFinalResults"
 import Mood from "./survey/Mood";
 import MediaChoice from "./app/components/Media/MediaChoice";
 import {BrowserRouter, Route} from 'react-router-dom';
+import Time from "./survey/Time";
 import test, { determineResults } from "./app/service/processing"
 
 const mediaTest = {
