@@ -52,7 +52,7 @@ export default [
         image: "https://images.genius.com/82f518b36b0958a230bbbd80fa7aaada.1000x1000x1.jpg",
         language: "english",
         rating: 2.2,
-        tags: ["Hip-hop","Rap"]
+        tags: ["hip-hop","rap"]
     },
     {
         title: "Highway To Hell",
@@ -63,18 +63,18 @@ export default [
         image: "https://m.media-amazon.com/images/I/71K1+8Xc7vL._SS500_.jpg",
         language: "english",
         rating: 3.9,
-        tags: ["Hard Rock"]
+        tags: ["hard rock"]
     },
     {
         title: "Rise",
         duration: 3,
-        types: ["Dance","Electronique"],
+        types: ["Dance","Electronic"],
         artists: ["Jonas Blue","Jack & Jack"],
         date: "15/06/2018",
         image: "https://www.lacoccinelle.net/1203726-1.jpg?20180825",
         language: "english",
         rating: 3.9,
-        tags: ["Dance","Electronique"]
+        tags: ["dance","electronic"]
     },
     {
         title: "All I Want For Christmas Is You",

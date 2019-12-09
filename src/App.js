@@ -5,6 +5,7 @@ import {Container} from "reactstrap";
 import MediaFinalResults from "./app/Scenes/MediaFinalResults/MediaFinalResults";
 import Mood from "./survey/Mood";
 import Time from "./survey/Time";
+import test, { determineResults } from "./app/service/processing"
 
 const mediaTest = {
     title: "Spider-man: Into the Spider-Verse",
@@ -17,6 +18,7 @@ const mediaTest = {
 
 
 function App() {
+    console.log(determineResults("angry","60",["movies","series","musics"]));
     return (
         <MediaFinalResults/>
     );

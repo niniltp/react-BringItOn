@@ -10,7 +10,7 @@ export default [
         image: "http://fr.web.img6.acsta.net/r_1920_1080/pictures/18/11/13/11/42/1696141.jpg",
         language: "english",
         rating: 4.5,
-        tags: ["comedy","romance"]
+        tags: ["comedy","romance","20"]
     },
     {
         title: "Black Mirror",
@@ -22,7 +22,7 @@ export default [
         image: "https://m.media-amazon.com/images/M/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
         language: "english",
         rating: 4.4,
-        tags: ["drama","sci-fi","thriller"]
+        tags: ["drama","sci-fi","thriller","60"]
     },
     {
         title: "Rick and Morty",
@@ -35,7 +35,7 @@ export default [
         image: "https://m.media-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_.jpg",
         language: "english",
         rating: 4.8,
-        tags: ["animation","adventure","comedy"]
+        tags: ["animation","adventure","comedy","20"]
     },
     {
         title: "Marianne",
@@ -48,7 +48,7 @@ export default [
         image: "http://fr.web.img3.acsta.net/r_1920_1080/pictures/19/09/09/15/42/0355057.jpg",
         language: "french",
         rating: 3.8,
-        tags: ["horror","halloween"]
+        tags: ["horror","halloween","45"]
     },
     {
         title: "La Casa De Papel",
@@ -61,7 +61,7 @@ export default [
         image: "http://fr.web.img6.acsta.net/r_1920_1080/pictures/19/07/22/10/12/3891122.jpg",
         language: "spanish",
         rating: 4.3,
-        tags: ["action","crime","mystery"]
+        tags: ["action","crime","mystery","45"]
     },
     {
         title: "Prison Break",
@@ -74,6 +74,6 @@ export default [
         image: "http://fr.web.img3.acsta.net/r_1920_1080/pictures/16/02/23/20/45/493648.jpg",
         language: "english",
         rating: 4.2,
-        tags: ["action","crime","drama"]
+        tags: ["action","crime","drama","45"]
     }
 ];
