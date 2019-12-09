@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import { Row, Col, Button, ButtonGroup, Container } from 'reactstrap';
 import './Survey.css';
-
+import {Link} from "react-router-dom";
 
 class Time extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-           rSelected: 0,
-           time: ""
+            medias: this.props.location.state.medias,
+            mood: this.props.location.state.mood,
+            rSelected: 0,
+            time: ""
         };
+        console.log(this.state.medias);
+        console.log(this.state.mood);
     }
 
     // 20, 45, 60, 120, 999 ==> string

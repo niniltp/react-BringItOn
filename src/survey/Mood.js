@@ -8,15 +8,16 @@ import sad from '../img/sad.png'
 import fine from '../img/fine.png'
 import soso from '../img/so-so.png'
 import Time from "./Time"
-
+import {Link} from "react-router-dom";
 
 class Mood extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-           rSelected: 0,
-           mood: "..."
+            medias: this.props.location.state.medias,
+            rSelected: 0,
+            mood: "..."
         };
     }
 
@@ -70,7 +71,7 @@ class Mood extends Component {
                 <h4 className="select-Mood Center">I am {this.state.mood}</h4>
 
                 <div className="Continue-mood">
-                    <Button className="btn-color-continue btn btn-animate" onClick={() => this.next()}><span>Continue</span></Button>
+                    <Link to={{pathname:'/time', state: {medias:this.state.medias, mood: this.state.mood}}}><Button className="btn-color-continue btn btn-animate" onClick={() => this.next()}><span>Continue</span></Button></Link>
                 </div>
             </div>
         ); 
