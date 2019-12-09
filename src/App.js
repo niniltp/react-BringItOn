@@ -4,9 +4,10 @@ import MediaCard from "./app/components/Media/MediaCard";
 import {Container} from "reactstrap";
 import MediaFinalResults from "./app/Scenes/MediaFinalResults/MediaFinalResults";
 import Mood from "./survey/Mood";
+import MediaChoice from "./app/components/Media/MediaChoice";
+import {BrowserRouter, Route} from 'react-router-dom';
 import Time from "./survey/Time";
 import test, { determineResults } from "./app/service/processing"
-import {BrowserRouter, Route} from "react-router-dom";
 
 const mediaTest = {
     title: "Spider-man: Into the Spider-Verse",
@@ -15,7 +16,6 @@ const mediaTest = {
     actors: ["Shameik Moore", "Jake Johnson", "Hailee Steinfeld"],
     duration: "1h 57m"
 };
-
 
 
 function App() {
