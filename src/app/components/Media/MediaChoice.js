@@ -46,11 +46,6 @@ class MediaChoice extends Component {
         }
     };
 
-    handleClick = () => {
-        console.log(this.state.medias);
-    };
-
-
     buttonChoice = () => {
         return (
             <div className="Media">
@@ -71,6 +66,23 @@ class MediaChoice extends Component {
         )
     };
 
+    next = () =>{
+        if( this.state.medias.length == 0){
+            return (
+                <Button className="btn-color-continue btn btn-animate" onClick={this.alertMedias}><span>Continue</span></Button>
+            )
+        }
+        else{
+            return(
+                <Link to={{pathname:'/mood', state: {medias:this.state.medias}}}><Button className="btn-color-continue btn btn-animate"><span>Continue</span></Button></Link>
+            )
+        }
+    }
+
+    alertMedias = () =>{
+        alert("Choose your medias pls");
+    }
+
     render() {
         console.log(this.state.medias);
         return (
@@ -78,7 +90,7 @@ class MediaChoice extends Component {
                 <h1>What do you want to do ?</h1>
                 {this.buttonChoice()}
                 <div className="Validation">
-                    <Link to={{pathname:'/mood', state: {medias:this.state.medias}}}><Button outline size="lg" color="secondary" onClick={() => this.handleClick()}>Bring it on !</Button></Link>
+                    {this.next()}
                 </div>
             </Container>
         )

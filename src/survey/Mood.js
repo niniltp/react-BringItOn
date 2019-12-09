@@ -47,13 +47,20 @@ class Mood extends Component {
     }
 
     next = () =>{
-
         if( this.state.mood === "..."){
-            alert("Choose your mood pls");
+            return (
+                <Button className="btn-color-continue btn btn-animate" onClick={this.alertMood}><span>Continue</span></Button>
+            )
         }
         else{
-            //send info
+            return(
+                <Link to={{pathname:'/time', state: {medias:this.state.medias, mood: this.state.mood}}}><Button className="btn-color-continue btn btn-animate"><span>Continue</span></Button></Link>
+            )
         }
+    }
+
+    alertMood = () =>{
+        alert("Choose your mood pls");
     }
 
     render(){
@@ -73,7 +80,7 @@ class Mood extends Component {
                 <h4 className="select-Mood Center">I am {this.state.mood}</h4>
 
                 <div className="Continue-mood">
-                    <Link to={{pathname:'/time', state: {medias:this.state.medias, mood: this.state.mood}}}><Button className="btn-color-continue btn btn-animate" onClick={() => this.next()}><span>Continue</span></Button></Link>
+                    {this.next()}
                 </div>
             </div>
         ); 

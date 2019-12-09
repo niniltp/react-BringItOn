@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Button, ButtonGroup, Container } from 'reactstrap';
 import './Survey.css';
 import {Link} from "react-router-dom";
+import { determineResults } from "../app/service/processing"
 
 class Time extends Component {
     constructor(props) {
@@ -11,7 +12,8 @@ class Time extends Component {
             medias: this.props.location.state.medias,
             mood: this.props.location.state.mood,
             rSelected: 0,
-            time: ""
+            time: "",
+            result: []
         };
         console.log(this.state.medias);
         console.log(this.state.mood);
@@ -63,13 +65,23 @@ class Time extends Component {
 
     next = () =>{
         if(this.state.time === ""){
-            alert("You didn't select a time :/");
+            return(
+                <Button className="btn btn-white btn-animate" onClick={() => this.alertTime()}>Surprise me !</Button>
+            )
         }
         else{
-            //send info
+            this.state.result = determineResults(this.state.mood,this.state.time,this.state.medias);
+
+            return(
+                <Link to={{pathname:'/media_final_result', state: {medias:this.state.medias, mood: this.state.mood}}}> <Button className="btn btn-white btn-animate" onClick={() => this.next()}>Surprise me !</Button></Link>
+            )
         }
     }
   
+    alertTime = () =>{
+        alert("You didn't select a time :/");
+    }
+
     render(){
         return(
             <Container>
@@ -116,7 +128,7 @@ class Time extends Component {
                 </div>
 
                 <div className="Continue-mood">
-                    <Button className="btn btn-white btn-animate" onClick={() => this.next()}>Surprise me !</Button>
+                    {this.next()}
                 </div>
 
             </Container> 

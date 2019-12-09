@@ -7,7 +7,7 @@ import Mood from "./survey/Mood";
 import MediaChoice from "./app/components/Media/MediaChoice";
 import {BrowserRouter, Route} from 'react-router-dom';
 import Time from "./survey/Time";
-import test, { determineResults } from "./app/service/processing"
+import { determineResults } from "./app/service/processing"
 
 const mediaTest = {
     title: "Spider-man: Into the Spider-Verse",
@@ -25,6 +25,7 @@ function App() {
             <Route exact path="/" component={MediaChoice}/>
             <Route exact path="/mood" component={Mood}/>
             <Route exact path="/time" component={Time}/>
+            <Route exact path="/media_final_result" component={MediaFinalResults}/>
         </BrowserRouter>
     );
 }
