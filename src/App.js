@@ -6,6 +6,7 @@ import MediaFinalResults from "./app/Scenes/MediaFinalResults/MediaFinalResults"
 import Mood from "./survey/Mood";
 import MediaChoice from "./app/components/Media/MediaChoice";
 import {BrowserRouter, Route} from 'react-router-dom';
+import test, { determineResults } from "./app/service/processing"
 
 const mediaTest = {
     title: "Spider-man: Into the Spider-Verse",
@@ -17,6 +18,7 @@ const mediaTest = {
 
 
 function App() {
+    console.log(determineResults("angry","60",["movies","series","musics"]));
     return (
         <BrowserRouter>
             <Route exact path="/" component={MediaChoice}/>

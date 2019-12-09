@@ -11,7 +11,7 @@ export default [
         image: "http://fr.web.img6.acsta.net/r_1920_1080/pictures/18/11/13/11/42/1696141.jpg",
         language: "english",
         rating: 4.4,
-        tags: ["animation","action","family"]
+        tags: ["animation","action","family","120"]
     },
     {
         title: "Avengers: Endgame",
@@ -25,7 +25,7 @@ export default [
         image: "http://fr.web.img2.acsta.net/r_1920_1080/pictures/19/04/04/09/04/0472053.jpg",
         language: "english",
         rating: 4.2,
-        tags: ["action","adventure","drama","sci-fi"]
+        tags: ["action","adventure","drama","sci-fi","999"]
     },
     {
         title: "Bridge to Terabithia",
@@ -39,7 +39,7 @@ export default [
         image: "http://fr.web.img6.acsta.net/r_1920_1080/medias/nmedia/18/63/01/37/18742142.jpg",
         language: "english",
         rating: 3.2,
-        tags: ["drama","family","fantasy"]
+        tags: ["drama","family","fantasy","120"]
     },
     {
         title: "Finding Nemo",
@@ -53,12 +53,12 @@ export default [
         image: "http://fr.web.img5.acsta.net/r_1920_1080/medias/nmedia/18/35/15/45/20258956.jpg",
         language: "english",
         rating: 3.2,
-        tags: ["animation","adventure","comedy"]
+        tags: ["animation","adventure","comedy","120"]
     },
     {
         title: "Kingsman",
         description: "A spy organization recruits an unrefined, but promising street kid into the agency's ultra-competitive training program, just as a global threat emerges from a twisted tech genius.",
-        duration: 129,
+        duration: 124,
         types: ["action","adventure","comedy"],
         actors: ["Colin Firth","Taron Egerton","Samuel L. Jackson"],
         directors: ["Matthew Vaughn"],
@@ -67,7 +67,7 @@ export default [
         image: "http://fr.web.img4.acsta.net/r_1920_1080/pictures/15/01/08/15/02/290347.jpg",
         language: "english",
         rating: 4.3,
-        tags: ["action","adventure","comedy"]
+        tags: ["action","adventure","comedy","120"]
     },
     {
         title: "Crazy, Stupid, Love",
@@ -81,7 +81,7 @@ export default [
         image: "http://fr.web.img4.acsta.net/r_1920_1080/medias/nmedia/18/85/84/05/19808153.jpg",
         language: "english",
         rating: 3.9,
-        tags: ["comedy","drama","romance","valentine's day"]
+        tags: ["comedy","drama","romance","valentine's day","120"]
     },
     {
         title: "Frozen",
@@ -95,7 +95,7 @@ export default [
         image: "http://fr.web.img5.acsta.net/r_1920_1080/pictures/210/521/21052146_20131023144339759.jpg",
         language: "english",
         rating: 4.1,
-        tags: ["animation","adventure","comedy","christmas"]
+        tags: ["animation","adventure","comedy","christmas","120"]
     },
     {
         title: "Frozen 2",
@@ -109,7 +109,7 @@ export default [
         image: "http://fr.web.img6.acsta.net/r_1920_1080/pictures/19/10/25/15/08/5952325.jpg",
         language: "english",
         rating: 4.0,
-        tags: ["animation","adventure","comedy","christmas"]
+        tags: ["animation","adventure","comedy","christmas","120"]
     },
     {
         title: "Annabelle",
@@ -123,7 +123,7 @@ export default [
         image: "http://fr.web.img4.acsta.net/r_1920_1080/pictures/14/10/09/10/20/418344.jpg",
         language: "english",
         rating: 2.7,
-        tags: ["horror","mystery","thriller","halloween"]
+        tags: ["horror","mystery","thriller","halloween","120"]
     },
     {
         title: "Ali Wong: Hard Knock Wife",
@@ -136,7 +136,7 @@ export default [
         image: "https://m.media-amazon.com/images/M/MV5BMWVkZDNjZTMtMTY0Yi00OGQ0LTliMDEtMWMxYzljYzZlYTY3XkEyXkFqcGdeQXVyMTEzNjA2NzM@._V1_.jpg",
         language: "english",
         rating: 3.7,
-        tags: ["comedy"]
+        tags: ["comedy","60"]
     },
     {
         title: "Intouchables",
@@ -150,7 +150,7 @@ export default [
         image: "http://fr.web.img6.acsta.net/r_1920_1080/medias/nmedia/18/82/69/17/19806656.jpg",
         language: "french",
         rating: 4.3,
-        tags: ["biography","comedy","drama"]
+        tags: ["biography","comedy","drama","120"]
     },
     {
         title: "Les Choristes",
@@ -164,7 +164,7 @@ export default [
         image: "http://fr.web.img5.acsta.net/r_1920_1080/medias/nmedia/18/35/18/77/18373973.jpg",
         language: "french",
         rating: 3.6,
-        tags: ["drama","music"]
+        tags: ["drama","music","120"]
     },
     {
         title: "The Sixth Sense",
@@ -178,7 +178,7 @@ export default [
         image: "http://fr.web.img6.acsta.net/r_1920_1080/medias/nmedia/18/66/15/77/19255607.jpg",
         language: "english",
         rating: 4.3,
-        tags: ["drama","mystery","thriller"]
+        tags: ["drama","mystery","thriller","120"]
     },
     {
         title: "Inglorious Basterds",
@@ -192,7 +192,7 @@ export default [
         image: "http://fr.web.img2.acsta.net/r_1920_1080/medias/nmedia/18/70/45/22/19123474.jpg",
         language: "english",
         rating: 4.3,
-        tags: ["adventure","drama","war"]
+        tags: ["adventure","drama","war","999"]
     },
     {
         title: "The conjuring",
@@ -206,7 +206,7 @@ export default [
         image: "http://fr.web.img6.acsta.net/r_1920_1080/pictures/210/025/21002526_20130430172022533.jpg",
         language: "english",
         rating: 4.2,
-        tags: ["horror","mystery","thriller","halloween"]
+        tags: ["horror","mystery","thriller","halloween","120"]
     },
     {
         title: "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
@@ -220,7 +220,7 @@ export default [
         image: "http://fr.web.img2.acsta.net/r_1920_1080/medias/nmedia/18/35/53/32/18463695.jpg",
         language: "english",
         rating: 3.5,
-        tags: ["adventure","family","fantasy"]
+        tags: ["adventure","family","fantasy","999"]
     },
     {
         title: "Crazy Rich Asians",
@@ -234,7 +234,7 @@ export default [
         image: "http://fr.web.img3.acsta.net/r_1920_1080/pictures/18/09/17/15/47/3771769.jpg",
         language: "english",
         rating: 3.3,
-        tags: ["comedy","drama","romance","valentine's day"]
+        tags: ["comedy","drama","romance","valentine's day","120"]
     },
     {
         title: "The Fifth Element",
@@ -248,7 +248,7 @@ export default [
         image: "https://m.media-amazon.com/images/M/MV5BZWFjYmZmZGQtYzg4YS00ZGE5LTgwYzAtZmQwZjQ2NDliMGVmXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SY1000_CR0,0,696,1000_AL_.jpg",
         language: "english",
         rating: 4.2,
-        tags: ["action","adventure","sci-fi"]
+        tags: ["action","adventure","sci-fi","120"]
     },
     {
         title: "Home Alone",
@@ -262,7 +262,7 @@ export default [
         image: "http://fr.web.img5.acsta.net/r_1920_1080/pictures/17/11/15/15/14/4627669.jpg",
         language: "english",
         rating: 3.3,
-        tags: ["comedy","family","christmas"]
+        tags: ["comedy","family","christmas","120"]
     },
     {
         title: "Valentine's Day",
@@ -276,6 +276,6 @@ export default [
         image: "http://fr.web.img3.acsta.net/r_1920_1080/medias/nmedia/18/73/64/49/19227040.jpg",
         language: "english",
         rating: 2.6,
-        tags: ["comedy","romance","valentine's day"]
+        tags: ["comedy","romance","valentine's day","120"]
     }
 ];
