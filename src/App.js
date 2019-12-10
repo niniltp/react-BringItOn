@@ -1,7 +1,11 @@
 import React from 'react';
 import './App.css';
 import MediaFinalResults from "./app/Scenes/MediaFinalResults/MediaFinalResults";
-import {determineResults} from "./app/service/processing"
+import Mood from "./survey/Mood";
+import MediaChoice from "./app/components/Media/MediaChoice";
+import {BrowserRouter, Route} from 'react-router-dom';
+import Time from "./survey/Time";
+import { determineResults } from "./app/service/processing"
 
 const medias = [
     {
@@ -26,11 +30,17 @@ const medias = [
         duration: "1h 57m"
     }];
 
+{/*<MediaFinalResults medias={medias}/>*/}
 
 function App() {
     console.log(determineResults("angry", "60", ["movies", "series", "musics"]));
     return (
-        <MediaFinalResults medias={medias}/>
+        <BrowserRouter>
+            <Route exact path="/" component={MediaChoice}/>
+            <Route exact path="/mood" component={Mood}/>
+            <Route exact path="/time" component={Time}/>
+            <Route exact path="/media_final_result" component={MediaFinalResults}/>
+        </BrowserRouter>
     );
 }
 
