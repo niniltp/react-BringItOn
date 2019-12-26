@@ -9,26 +9,27 @@ h1{
 .Media img{
     width: 50%;
     height: 9em;
-
 }
 
 .Media Button{
     border-radius: 100%;
     margin-left: 8%;
     margin-right: 7%;
-    background-color: #FFD620;
+}
+
+.Media Button.active, .Media Button:hover{
+    background-color: #FFD620 !important;
 }
 
 .Media{
-    padding-top: 15%;
+    padding-top: 12%;
     margin-left: 8%;
     margin-right: 5%;
 }
 
 .Validation Button{
     float: right;
-    margin-top: 18%;
+    margin-top: 10%;
     /*border-radius: 0%;*/
-
 }
 

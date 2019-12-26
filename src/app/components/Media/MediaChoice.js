@@ -51,8 +51,8 @@ class MediaChoice extends Component {
             <div className="Media">
                 <div className="row">
                     <Button className="col-2" onClick={() => this.selectMedia("movies")} active={this.state.medias.includes("movies")}><img src={movie} alt="movies"/></Button>
-                    <Button className="col-2" onClick={() => this.selectMedia("musics")} active={this.state.medias.includes("musics")}><img src={music} alt="musics"/></Button>
                     <Button className="col-2" onClick={() => this.selectMedia("series")} active={this.state.medias.includes("series")}><img src={serie} alt="series"/></Button>
+                    <Button className="col-2" onClick={() => this.selectMedia("musics")} active={this.state.medias.includes("musics")}><img src={music} alt="musics"/></Button>
                 </div>
             </div>
         );
