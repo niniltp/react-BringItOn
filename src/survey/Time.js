@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Container} from 'reactstrap';
+import {Button, Container, Fade} from 'reactstrap';
 import './Survey.css';
 import {Redirect} from "react-router-dom";
 import {determineResults} from "../app/service/processing"
@@ -60,73 +60,76 @@ class Time extends Component {
     };
 
     next = () => {
-        if (this.state.time === "") {
-            this.alertTime();
-        } else {
-            const results = determineResults(this.state.mood, this.state.time, this.state.medias);
+        const results = determineResults(this.state.mood, this.state.time, this.state.medias);
 
-            this.setState({result: results}, () => {
-                this.setState({redirect: true})
-            });
-        }
-    };
-
-    alertTime = () => {
-        alert("You didn't select a time :/");
+        this.setState({result: results}, () => {
+            this.setState({redirect: true})
+        });
     };
 
     render() {
         return (
             <Container>
-                <header className="Survey-header">
-                    <h1>Do you have time ?</h1>
-                </header>
+                <Fade timeout={1000} style={{transition: '2s'}}>
+                    <header className="Survey-header">
+                        <h1>Do you have time ?</h1>
+                    </header>
+                </Fade>
+                <Fade timeout={1700} style={{transition: '2s'}}>
+                    <div className="Center">
+                        <div className="Timeline"></div>
+                    </div>
 
-                <div className="Center">
-                    <div className="Timeline"></div>
-                </div>
+                    <div>
+                        <ul className="a Center">
+                            <li className="colorfont">
+                                <Button className="Button-time" onClick={() => this.setRSelected(1)}
+                                        active={this.state.rSelected === 1}> </Button>
+                            </li>
+                            <li className="colorfont">
+                                <Button className="Button-time" onClick={() => this.setRSelected(2)}
+                                        active={this.state.rSelected === 1}> </Button>
+                            </li>
+                            <li className="colorfont">
+                                <Button className="Button-time" onClick={() => this.setRSelected(3)}
+                                        active={this.state.rSelected === 1}> </Button>
+                            </li>
+                            <li className="colorfont">
+                                <Button className="Button-time" onClick={() => this.setRSelected(4)}
+                                        active={this.state.rSelected === 1}> </Button>
+                            </li>
+                            <li className="colorfont">
+                                <Button className="Button-time" onClick={() => this.setRSelected(5)}
+                                        active={this.state.rSelected === 1}> </Button>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div>
-                    <ul className="a Center">
-                        <li className="colorfont">
-                            <Button className="Button-time" onClick={() => this.setRSelected(1)}
-                                    active={this.state.rSelected === 1}> </Button>
-                        </li>
-                        <li className="colorfont">
-                            <Button className="Button-time" onClick={() => this.setRSelected(2)}
-                                    active={this.state.rSelected === 1}> </Button>
-                        </li>
-                        <li className="colorfont">
-                            <Button className="Button-time" onClick={() => this.setRSelected(3)}
-                                    active={this.state.rSelected === 1}> </Button>
-                        </li>
-                        <li className="colorfont">
-                            <Button className="Button-time" onClick={() => this.setRSelected(4)}
-                                    active={this.state.rSelected === 1}> </Button>
-                        </li>
-                        <li className="colorfont">
-                            <Button className="Button-time" onClick={() => this.setRSelected(5)}
-                                    active={this.state.rSelected === 1}> </Button>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="text-time">
-                    <ul className="a">
-                        <li className="colorfont">20min</li>
-                        <li className="colorfont">45min</li>
-                        <li className="colorfont">1h</li>
-                        <li className="colorfont">2h</li>
-                        <li className="colorfont">Whatever</li>
-                    </ul>
-                </div>
-
-                <div className="select-Time Center colorfont">
-                    <h4>Let's go for {this.display()}</h4>
-                </div>
-
+                    <div className="text-time">
+                        <ul className="a">
+                            <li className="colorfont">20min</li>
+                            <li className="colorfont">45min</li>
+                            <li className="colorfont">1h</li>
+                            <li className="colorfont">2h</li>
+                            <li className="colorfont">Whatever</li>
+                        </ul>
+                    </div>
+                </Fade>
+                {this.state.time !== "" ?
+                    <Fade timeout={500} style={{transition: '2s'}}>
+                        <div className="select-Time Center colorfont">
+                            <h4>Let's go for {this.display()}</h4>
+                        </div>
+                    </Fade>
+                    : ""
+                }
                 <div className="Continue-mood">
-                    <Button className="btn btn-white btn-animate" onClick={() => this.next()}>Surprise me !</Button>
+                    {this.state.time !== "" ?
+                        <Fade timeout={1000} style={{transition: '2s'}}>
+                            <Button className="btn btn-white btn-animate" onClick={() => this.next()}>Surprise me !</Button>
+                        </Fade>
+                        : ""}
+
                     {this.state.redirect ? <Redirect
                         to={{pathname: '/results', state: {medias: this.state.result, mood: this.state.mood}}}/> : ""}
                 </div>
