@@ -10,7 +10,7 @@ class MediaContainer extends Component {
             <div className="MediaContainer">
                 <h2 className="MediaContainer-title">{firstLetterUpperCase(this.props.title)}</h2>
                 <Row>
-                    {this.props.media && this.props.media.length > 0 ?
+                    {this.props.medias && this.props.medias.length > 0 ?
                         this.props.medias.map((media, key) => {
                             return <Col sm="4" key={key}><MediaModal media={media}/></Col>
                         }) : <Col sm="12"><h3 className="MediaContainer-noContent text-center">Sorry,
