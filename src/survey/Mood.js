@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button} from 'reactstrap';
+import {Button, Fade} from 'reactstrap';
 import './Survey.css';
 import './Button.css'
 import angry from '../img/angry.png'
@@ -46,43 +46,50 @@ class Mood extends Component {
     }
 
     next = () => {
-        if (this.state.mood === "...") {
+        if (this.state.mood !== "...") {
             return (
-                <Button className="btn-color-continue btn btn-animate"
-                        onClick={this.alertMood}><span>Continue</span></Button>
-            )
-        } else {
-            return (
-                <Link to={{pathname: '/time', state: {medias: this.state.medias, mood: this.state.mood}}}><Button
-                    className="btn-color-continue btn btn-animate"><span>Continue</span></Button></Link>
+                <Fade timeout={500} style={{transition: '2s'}}>
+                    <Link to={{pathname: '/time', state: {medias: this.state.medias, mood: this.state.mood}}}><Button
+                        className="btn-color-continue btn btn-animate"><span>Continue</span></Button></Link>
+                </Fade>
             )
         }
-    }
-
-    alertMood = () => {
-        alert("Choose your mood pls");
-    }
+    };
 
     render() {
         console.log(this.state.medias);
         return (
             <div>
-                <header className="Survey-header">
-                    <h1>How are you doing today ?</h1>
-                </header>
+                <Fade timeout={1000} style={{transition: '2s'}}>
+                    <header className="Survey-header">
+                        <h1>How are you doing today ?</h1>
+                    </header>
+                </Fade>
                 <div className="Center">
-                    <Button className="Button-mood" onClick={() => this.setRSelected(1)}
-                            active={this.state.rSelected === 1}><img src={angry} alt="angryMood"/></Button>
-                    <Button className="Button-mood" onClick={() => this.setRSelected(2)}
-                            active={this.state.rSelected === 2}><img src={sad} alt="sadMood"/></Button>
-                    <Button className="Button-mood" onClick={() => this.setRSelected(3)}
-                            active={this.state.rSelected === 3}><img src={soso} alt="sosoMood"/></Button>
-                    <Button className="Button-mood" onClick={() => this.setRSelected(4)}
-                            active={this.state.rSelected === 4}><img src={fine} alt="fineMood"/></Button>
-                    <Button className="Button-mood" onClick={() => this.setRSelected(5)}
-                            active={this.state.rSelected === 5}><img src={happy} alt="happyMood"/></Button>
+                    <Fade timeout={1500} style={{transition: '2s'}}>
+                        <Button className="Button-mood" onClick={() => this.setRSelected(1)}
+                                active={this.state.rSelected === 1}><img src={angry} alt="angryMood"/></Button>
+                    </Fade>
+                    <Fade timeout={1700} style={{transition: '2s'}}>
+                        <Button className="Button-mood" onClick={() => this.setRSelected(2)}
+                                active={this.state.rSelected === 2}><img src={sad} alt="sadMood"/></Button>
+                    </Fade>
+                    <Fade timeout={1900} style={{transition: '2s'}}>
+                        <Button className="Button-mood" onClick={() => this.setRSelected(3)}
+                                active={this.state.rSelected === 3}><img src={soso} alt="sosoMood"/></Button>
+                    </Fade>
+                    <Fade timeout={2100} style={{transition: '2s'}}>
+                        <Button className="Button-mood" onClick={() => this.setRSelected(4)}
+                                active={this.state.rSelected === 4}><img src={fine} alt="fineMood"/></Button>
+                    </Fade>
+                    <Fade timeout={2300} style={{transition: '2s'}}>
+                        <Button className="Button-mood" onClick={() => this.setRSelected(5)}
+                                active={this.state.rSelected === 5}><img src={happy} alt="happyMood"/></Button>
+                    </Fade>
                 </div>
-                <h4 className="select-Mood Center">I am {this.state.mood}</h4>
+                <Fade timeout={3000} style={{transition: '2s'}}>
+                    <h4 className="select-Mood Center">I am {this.state.mood}</h4>
+                </Fade>
 
                 <div className="Continue-mood">
                     {this.next()}
