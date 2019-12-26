@@ -7,7 +7,7 @@ export default [
         actors: ["Jennifer Aniston","Courteney Cox","Lisa Kudrow","Matt LeBlanc","Matthew Perry","David Schwimmer"],
         directors: ["David Crane","Marta Kauffman"],
         date: "22/09/1994",
-        image: "http://fr.web.img6.acsta.net/r_1920_1080/pictures/18/11/13/11/42/1696141.jpg",
+        image: "https://m.media-amazon.com/images/M/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
         language: "english",
         rating: 4.5,
         tags: ["comedy","romance","20"]
