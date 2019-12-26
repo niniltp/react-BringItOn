@@ -12,7 +12,7 @@ class Welcome extends Component {
                 </Fade>
                 <Fade timeout={2500} style={{transition: '2s'}}>
                     <Link to={{pathname: '/medias'}}><Button
-                        className="btn-color-continue btn btn-animate"><span>Begin</span></Button></Link>
+                        className="btn-color-continue btn btn-animate"><span>Bring it on</span></Button></Link>
                 </Fade>
             </div>
         )
