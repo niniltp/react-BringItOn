@@ -4,7 +4,6 @@ import Fullpage, {FullpageNavigation, FullpageSection, FullPageSections} from "@
 import ArrowDown from "../../components/Animations/ArrowDown";
 import MediasContainer from "../../components/Media/MediasContainer";
 import './MediaFinalResults.css';
-import {firstLetterUpperCase} from "../../utilities/textFormater";
 
 class MediaFinalResults extends Component {
     constructor(props) {
