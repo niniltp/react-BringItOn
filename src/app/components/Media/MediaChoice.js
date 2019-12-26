@@ -67,7 +67,7 @@ class MediaChoice extends Component {
     };
 
     next = () =>{
-        if( this.state.medias.length == 0){
+        if( this.state.medias.length === 0){
             return (
                 <Button className="btn-color-continue btn btn-animate" onClick={this.alertMedias}><span>Continue</span></Button>
             )

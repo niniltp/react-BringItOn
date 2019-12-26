@@ -14,7 +14,6 @@ class MediaModal extends Component {
     }
 
     toggle = () => {
-        console.log("hey");
         this.setState((prevState) => ({
             isOpen: !prevState.isOpen
         }));
