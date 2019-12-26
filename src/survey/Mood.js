@@ -48,7 +48,7 @@ class Mood extends Component {
     next = () => {
         if (this.state.mood !== "...") {
             return (
-                <Fade timeout={500} style={{transition: '2s'}}>
+                <Fade timeout={1000} style={{transition: '2s'}}>
                     <Link to={{pathname: '/time', state: {medias: this.state.medias, mood: this.state.mood}}}><Button
                         className="btn-color-continue btn btn-animate"><span>Continue</span></Button></Link>
                 </Fade>
@@ -87,9 +87,10 @@ class Mood extends Component {
                                 active={this.state.rSelected === 5}><img src={happy} alt="happyMood"/></Button>
                     </Fade>
                 </div>
-                <Fade timeout={3000} style={{transition: '2s'}}>
+                {this.state.mood !== "..." ?  <Fade timeout={500} style={{transition: '2s'}}>
                     <h4 className="select-Mood Center">I am {this.state.mood}</h4>
-                </Fade>
+                </Fade> : ""}
+
 
                 <div className="Continue-mood">
                     {this.next()}
