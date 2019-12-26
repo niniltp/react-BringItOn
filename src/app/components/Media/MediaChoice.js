@@ -78,7 +78,7 @@ class MediaChoice extends Component {
 
     render() {
         return (
-            <Container className="container-fluid">
+            <Container className="container-fluid MediaChoice">
                 <Fade timeout={1000} style={{transition: '2s'}}>
                     <h1>What do you want to do ?</h1>
                 </Fade>

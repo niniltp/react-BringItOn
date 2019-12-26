@@ -1,0 +1,11 @@
+.BackButton {
+    background-color: transparent !important;
+    color: #1b1e23 !important;
+    font-size: 5em !important;
+    outline: none !important;
+    border: none !important;
+}
+
+.BackButton:hover {
+    box-shadow: none;
+}

@@ -4,60 +4,65 @@ html {
 }
 
 .App {
-  background-color: #282c34;
+    background-color: #282c34;
 }
 
 .Survey-header {
-  text-align: center;
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  margin: 100px;
+    text-align: center;
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin-bottom: 5%;
 }
 
 /* MOOD */
 
 .Button-mood {
-  width: 65px;
-  height: 65px;
-  border-radius: 50% !important;
-  margin: 20px !important;
-  background-color: #282c34 !important;
-  border-color: #282c34 !important;
-  padding: 0px !important;
+    width: 65px;
+    height: 65px;
+    border-radius: 50% !important;
+    margin: 20px !important;
+    background-color: #282c34 !important;
+    border-color: #282c34 !important;
+    padding: 0px !important;
 }
 
 .Center {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .select-Mood {
-  color: white;
-  margin: 30px;
+    color: white;
+    margin: 30px;
 }
 
 .Continue-mood {
-  margin-top: 30px;
-  float: right !important;
+    margin-top: 4%;
+    float: right !important;
 }
 
 .Continue-button {
-  float: right !important;
-  border-radius: 20px !important;
-  margin-left: 5px;
-  margin-right: 5px;
+    float: right !important;
+    border-radius: 20px !important;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5%;
 }
 
 /* TIME */
 
+.timeline-block {
+    margin-top: 7%;
+}
+
 /* timeline element */
-.Timeline{
+.Timeline {
     text-align: center;
     width: 80%;
     height: 5px;
@@ -66,8 +71,8 @@ html {
 }
 
 /* test time line */
-.a{
-  padding-inline-start: 0px !important;
+.a {
+    padding-inline-start: 0px !important;
 }
 
 /* points on timeline */
@@ -92,16 +97,16 @@ html {
 }
 
 /* for the part with the time */
-.text-time{
+.text-time {
     margin-top: 30px !important;
 }
 
 /* color for the text */
-.colorfont{
+.colorfont {
     color: #ffffff !important;
 }
 
 
-.select-Time{
-  margin-top: 80px !important;
+.select-Time {
+    margin-top: 80px !important;
 }

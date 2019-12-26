@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Fade} from 'reactstrap';
+import {Button, Container, Fade} from 'reactstrap';
 import './Survey.css';
 import './Button.css'
 import angry from '../img/angry.png'
@@ -8,6 +8,7 @@ import sad from '../img/sad.png'
 import fine from '../img/fine.png'
 import soso from '../img/so-so.png'
 import {Link} from "react-router-dom";
+import BackButton from "../app/components/Media/BackButton/BackButton";
 
 class Mood extends Component {
     constructor(props) {
@@ -59,7 +60,10 @@ class Mood extends Component {
     render() {
         console.log(this.state.medias);
         return (
-            <div>
+            <Container>
+                <Fade timeout={2000} style={{transition: '2s'}}>
+                    <BackButton back={this.props.history.goBack}/>
+                </Fade>
                 <Fade timeout={1000} style={{transition: '2s'}}>
                     <header className="Survey-header">
                         <h1>How are you doing today ?</h1>
@@ -95,7 +99,7 @@ class Mood extends Component {
                 <div className="Continue-mood">
                     {this.next()}
                 </div>
-            </div>
+            </Container>
         );
     }
 }

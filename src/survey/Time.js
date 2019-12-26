@@ -3,6 +3,7 @@ import {Button, Container, Fade} from 'reactstrap';
 import './Survey.css';
 import {Redirect} from "react-router-dom";
 import {determineResults} from "../app/service/processing"
+import BackButton from "../app/components/Media/BackButton/BackButton";
 
 class Time extends Component {
     constructor(props) {
@@ -70,51 +71,56 @@ class Time extends Component {
     render() {
         return (
             <Container>
+                <Fade timeout={2000} style={{transition: '2s'}}>
+                    <BackButton back={this.props.history.goBack}/>
+                </Fade>
                 <Fade timeout={1000} style={{transition: '2s'}}>
                     <header className="Survey-header">
                         <h1>Do you have time ?</h1>
                     </header>
                 </Fade>
-                <Fade timeout={1700} style={{transition: '2s'}}>
-                    <div className="Center">
-                        <div className="Timeline"></div>
-                    </div>
+                <div className="timeline-block">
+                    <Fade timeout={1700} style={{transition: '2s'}}>
+                        <div className="Center">
+                            <div className="Timeline"></div>
+                        </div>
 
-                    <div>
-                        <ul className="a Center">
-                            <li className="colorfont">
-                                <Button className="Button-time" onClick={() => this.setRSelected(1)}
-                                        active={this.state.rSelected === 1}> </Button>
-                            </li>
-                            <li className="colorfont">
-                                <Button className="Button-time" onClick={() => this.setRSelected(2)}
-                                        active={this.state.rSelected === 1}> </Button>
-                            </li>
-                            <li className="colorfont">
-                                <Button className="Button-time" onClick={() => this.setRSelected(3)}
-                                        active={this.state.rSelected === 1}> </Button>
-                            </li>
-                            <li className="colorfont">
-                                <Button className="Button-time" onClick={() => this.setRSelected(4)}
-                                        active={this.state.rSelected === 1}> </Button>
-                            </li>
-                            <li className="colorfont">
-                                <Button className="Button-time" onClick={() => this.setRSelected(5)}
-                                        active={this.state.rSelected === 1}> </Button>
-                            </li>
-                        </ul>
-                    </div>
+                        <div>
+                            <ul className="a Center">
+                                <li className="colorfont">
+                                    <Button className="Button-time" onClick={() => this.setRSelected(1)}
+                                            active={this.state.rSelected === 1}> </Button>
+                                </li>
+                                <li className="colorfont">
+                                    <Button className="Button-time" onClick={() => this.setRSelected(2)}
+                                            active={this.state.rSelected === 1}> </Button>
+                                </li>
+                                <li className="colorfont">
+                                    <Button className="Button-time" onClick={() => this.setRSelected(3)}
+                                            active={this.state.rSelected === 1}> </Button>
+                                </li>
+                                <li className="colorfont">
+                                    <Button className="Button-time" onClick={() => this.setRSelected(4)}
+                                            active={this.state.rSelected === 1}> </Button>
+                                </li>
+                                <li className="colorfont">
+                                    <Button className="Button-time" onClick={() => this.setRSelected(5)}
+                                            active={this.state.rSelected === 1}> </Button>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div className="text-time">
-                        <ul className="a">
-                            <li className="colorfont">20min</li>
-                            <li className="colorfont">45min</li>
-                            <li className="colorfont">1h</li>
-                            <li className="colorfont">2h</li>
-                            <li className="colorfont">Whatever</li>
-                        </ul>
-                    </div>
-                </Fade>
+                        <div className="text-time">
+                            <ul className="a">
+                                <li className="colorfont">20min</li>
+                                <li className="colorfont">45min</li>
+                                <li className="colorfont">1h</li>
+                                <li className="colorfont">2h</li>
+                                <li className="colorfont">Whatever</li>
+                            </ul>
+                        </div>
+                    </Fade>
+                </div>
                 {this.state.time !== "" ?
                     <Fade timeout={500} style={{transition: '2s'}}>
                         <div className="select-Time Center colorfont">
@@ -123,10 +129,11 @@ class Time extends Component {
                     </Fade>
                     : ""
                 }
-                <div className="Continue-mood">
+                <div className="Continue-button">
                     {this.state.time !== "" ?
                         <Fade timeout={1000} style={{transition: '2s'}}>
-                            <Button className="btn btn-white btn-animate" onClick={() => this.next()}>Surprise me !</Button>
+                            <Button className="btn btn-white btn-animate" onClick={() => this.next()}>Surprise me
+                                !</Button>
                         </Fade>
                         : ""}
 
