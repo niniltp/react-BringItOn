@@ -4,6 +4,7 @@ import Fullpage, {FullpageNavigation, FullpageSection, FullPageSections} from "@
 import ArrowDown from "../../components/Animations/ArrowDown";
 import MediasContainer from "../../components/Media/MediasContainer";
 import './MediaFinalResults.css';
+import {firstLetterUpperCase} from "../../utilities/textFormater";
 
 class MediaFinalResults extends Component {
     constructor(props) {
@@ -40,13 +41,12 @@ class MediaFinalResults extends Component {
         /* Medias sections */
         for (const key in this.state.mediasGp) {
             if (this.state.mediasGp.hasOwnProperty(key)) {
-                const title = key[0].toUpperCase() + key.slice(1); // Uppercase the first letter
                 sections.push(
                     <FullpageSection key={key} style={{
                         height: '100vh',
                         padding: '1em',
                     }}>
-                        <Container><MediasContainer title={title} medias={this.state.mediasGp[key]}/></Container>
+                        <Container><MediasContainer title={key} medias={this.state.mediasGp[key]}/></Container>
                     </FullpageSection>)
             }
         }
