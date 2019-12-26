@@ -1,19 +1,21 @@
 .MediaContainer {
     margin-bottom: 50px;
     height: 100vh;
+    text-align: center;
+    color: white;
 }
 
 .MediaContainer-title {
     margin: 50px 0 50px;
     font-weight: normal;
-    text-align: center;
-    color: white;
 }
 
 .MediaContainer-noContent {
     margin: 50px 0 50px;
     font-weight: lighter;
-    color: white;
-    text-align: center;
     font-size: 1.5em;
+}
+
+.MediaContainer button {
+    margin-top: 2%;
 }
