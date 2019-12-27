@@ -1,3 +1,4 @@
+/* Use https://www.npmjs.com/package/react-particles-js */
 import {
     isHalloweenPeriod,
     isNewYearPeriod,
