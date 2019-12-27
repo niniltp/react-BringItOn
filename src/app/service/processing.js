@@ -3,10 +3,10 @@ import movies from '../../database/movies.js';
 import series from '../../database/series.js';
 import musics from '../../database/musics.js';
 import media from '../../database/media.js';
+import {isChristmasPeriod, isHalloweenPeriod, isNewYearPeriod, isValentinePeriod} from "../utilities/datesPeriod";
 
 export function determineResults(mood, time, medias) {
-
-    var tabMedias = {};
+    let tabMedias = {};
 
     if (medias.includes("movies")) {
         tabMedias["movies"] = movies;
@@ -21,19 +21,19 @@ export function determineResults(mood, time, medias) {
         tabMedias["medias"] = media;
     }
 
-    var result = {};
-    var [tags, t] = determineTags(mood, time);
+    let result = {};
+    let [tags, t] = determineTags(mood, time);
 
     for (const key in tabMedias) {
         if (tabMedias.hasOwnProperty(key)) {
             let element1 = tabMedias[key];
             // tabMedias.forEach(element1 => {
-            var tab = [];
+            let tab = [];
 
             element1.forEach(element2 => {
 
                 if ((element2["tags"].filter(value => t.includes(value))).length !== 0 || element1 === musics) {
-                    var cpt = 0;
+                    let cpt = 0;
 
                     element2["tags"].forEach(element3 => {
 
@@ -42,10 +42,10 @@ export function determineResults(mood, time, medias) {
                         }
                     });
 
-                    var tabTemp = [cpt, element2];
+                    let tabTemp = [cpt, element2];
                     tab.push(tabTemp);
                 }
-            })
+            });
 
             tab.sort().reverse();
 
@@ -53,7 +53,7 @@ export function determineResults(mood, time, medias) {
                 tab.length = 3;
             }
 
-            var tabTemp2 = [];
+            let tabTemp2 = [];
 
             tab.forEach(element3 => {
                 tabTemp2.push(element3[1]);
@@ -67,39 +67,22 @@ export function determineResults(mood, time, medias) {
 }
 
 export function determineTags(mood, time) {
-
     /// MOOD
-    var tags = moods[mood];
+    let tags = moods[mood];
 
     /// DATE
-    var date = new Date();
+    const date = new Date();
 
-    // Christmas dates
-    var dateStartChristmas = new Date(date.getFullYear(), 11, 1);
-    var dateEndChritmas = new Date(date.getFullYear(), 21, 26);
-
-    // Halloween dates
-    var dateStartHalloween = new Date(date.getFullYear(), 9, 15);
-    var dateEndHalloween = new Date(date.getFullYear(), 10, 15);
-
-    // Valentine's day dates
-    var dateStartValentine = new Date(date.getFullYear(), 9, 15);
-    var dateEndValentine = new Date(date.getFullYear(), 10, 15);
-
-    // New year's eve dates
-    var dateStartNewYear = new Date(date.getFullYear(), 1, 10);
-    var dateEndNewYear = new Date(date.getFullYear(), 1, 17);
-
-    if (date >= dateStartChristmas && date <= dateEndChritmas) {
+    if (isChristmasPeriod(date)) {
         console.log("christmas");
         tags.push("christmas");
-    } else if (date >= dateStartHalloween && date <= dateEndHalloween) {
+    } else if (isHalloweenPeriod(date)) {
         console.log("halloween");
         tags.push("halloween");
-    } else if (date >= dateStartValentine && date <= dateEndValentine) {
+    } else if (isValentinePeriod(date)) {
         console.log("valentine's day");
         tags.push("valentine's day");
-    } else if (date >= dateStartNewYear && date <= dateEndNewYear) {
+    } else if (isNewYearPeriod(date)) {
         console.log("new year's eve");
         tags.push("new year's eve");
     }
