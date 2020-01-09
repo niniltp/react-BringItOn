@@ -24,7 +24,7 @@ class MediaCard extends Component {
         return {
             title: mediaData.title ? mediaData.title : '',
             description: mediaData.description ? mediaData.description : '',
-            categories: mediaData.categories ? mediaData.categories : [],
+            categories: mediaData.types ? mediaData.types : [],
             duration: mediaData.duration ? mediaData.duration : '',
             date: mediaData.date ? mediaData.date : '',
             image: mediaData.image ? mediaData.image : '',
